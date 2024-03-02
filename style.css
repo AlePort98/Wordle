@@ -1,49 +1,117 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-     
-  h1 {
-    text-align: center;
-    margin-top: 50px;
-  }
-     
-  #guess-input {
-    display: block;
-    margin: 0 auto 20px;
-    padding: 10px;
-    font-size: 18px;
-    width: 250px;
-    border: 1px solid #ccc;
-  }
-     
-  #guess-button {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #0CBABA;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-  }
-     
-  button:active {
-      transform: scale(0.95);
-  }
-     
-  .letter {
-      border: 1px solid black;
-      padding: 3px;
-      margin: 3px;
-      min-width: 20px;
-      text-align: center;
-      display: inline-block
-  }
-     
-  .row{
-      margin-bottom: 20px;
-  }
-     
-  .input-area{
-      margin: 50px;
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  background-image: url('https://www.informador.mx/__export/1545070368133/sites/elinformador/img/2018/12/17/dqh9dytwoaal2wf_1_crop1545070339139.jpg_1970638775.jpg');
+  background-size: cover;
+    background-position: auto;
+    background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.842);
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 23px;
+  color: #b3b01d;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(236, 159, 159, 0.5);
+  box-shadow: 0 0 10px rgba(244, 186, 186, 0.842);
+}
+
+#wordle-container {
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.letter {
+  width: 40px;
+  height: 40px;
+  margin: 5px 5px;
+  border-radius: 5px;
+  background-color: #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.letter.correct {
+  background-color: #4CAF50;
+}
+
+.letter.incorrect-position {
+  background-color: #FFEB3B;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#check-btn {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+#check-btn:hover {
+  background-color: #005f75;
+}
+
+#guess-input {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+}
+
+#keyboard {
+  margin-top: 50px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+}
+
+.keyboard-btn {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.keyboard-btn:hover {
+  background-color: #951212;
+}
